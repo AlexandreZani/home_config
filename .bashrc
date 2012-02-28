@@ -116,4 +116,4 @@ alias c='clear'
 alias py='python'
 alias ipy='ipython'
 
-source .bashrc.local
+[ -f ~/.bashrc.local ] && source ~/.bashrc.local
