@@ -1,0 +1,11 @@
+/*
+/bin/*
+/.xmonad/*
+!/.xmonad/
+!/.xmonad/xmonad.hs
+!/.gitignore
+!/.vimrc
+!/.bashrc
+!/bin/dpass
+!/.screenrc
+!/bin
