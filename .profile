@@ -9,6 +9,7 @@
 #umask 022
 
 export SUDO_ASKPASS="$HOME/bin/dpass"
+xmodmap $HOME/.xmodmaprc
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
