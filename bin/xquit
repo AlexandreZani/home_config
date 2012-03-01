@@ -1,0 +1,27 @@
+#!/bin/sh
+
+selection=`tail -n 5 $0 | dmenu`
+
+if [ "$selection" == "shutdown" ]; then
+  cmd="sudo -A shutdown -h now"
+elif [ "$selection" == "restart" ]; then
+  cmd="sudo -A shutdown -r now"
+elif [ "$selection" == "logout" ]; then
+  cmd="sudo -A pkill -9 $USER"
+elif [ "$selection" == "lock" ]; then
+  cmd="xlock -model ant"
+elif [ "$selection" == "cancel" ]; then
+  exit 0
+else
+  echo "Bad Command"
+  exit 1
+fi
+
+exec $cmd
+exit 0
+
+cancel
+lock
+shutdown
+restart
+logout
