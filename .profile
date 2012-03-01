@@ -11,6 +11,11 @@
 export SUDO_ASKPASS="$HOME/bin/dpass"
 xmodmap $HOME/.xmodmaprc
 
+if [ -f $HOME/.profile.local ]
+then
+  . $HOME/.profile.local
+fi
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
