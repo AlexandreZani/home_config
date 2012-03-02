@@ -9,7 +9,7 @@
 #umask 022
 
 export SUDO_ASKPASS="$HOME/bin/dpass"
-xmodmap $HOME/.xmodmaprc
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 
 if [ -f $HOME/.profile.local ]
 then
