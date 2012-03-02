@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 selection=`tail -n 5 $0 | dmenu`
 
@@ -13,7 +13,7 @@ elif [ "$selection" == "lock" ]; then
 elif [ "$selection" == "cancel" ]; then
   exit 0
 else
-  echo "Bad Command"
+  echo "Bad Command: $selection"
   exit 1
 fi
 
