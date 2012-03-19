@@ -117,5 +117,7 @@ alias i='history'
 alias c='clear'
 alias py='python'
 alias ipy='ipython'
+alias :w='echo "This is not vim"'
+alias :q='echo "This is not vim"'
 
 [ -f ~/.bashrc.local ] && source ~/.bashrc.local
