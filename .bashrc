@@ -107,6 +107,7 @@ fi
 
 export LOCAL_HOME=/usr/local/google/home/$USER
 alias vim="vim"
+alias vs="vim -"
 alias v="vim"
 alias e="vim ~/.bashrc"
 alias el="vim ~/.bashrc.local"
@@ -119,5 +120,6 @@ alias py='python'
 alias ipy='ipython'
 alias :w='echo "This is not vim"'
 alias :q='echo "This is not vim"'
+alias gb="git branch | grep '*'"
 
 [ -f ~/.bashrc.local ] && source ~/.bashrc.local
