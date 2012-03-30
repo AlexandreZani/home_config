@@ -33,6 +33,12 @@ vnoremap <C-H> :<C-U>Hexmode<CR>
 au! BufRead,BufNewFile *.json setfiletype json
 let javaScript_fold=1
 
+" Auto reload vimrc when you save it
+if has("autcmd")
+  autocmd BufWritePost .vimrc source $MYVIMRC
+  autocmd BufWritePost .vimrc.local source $MYVIMRC
+endif
+
 if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
