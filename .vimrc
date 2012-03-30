@@ -31,6 +31,7 @@ inoremap <C-H> <Esc>:Hexmode<CR>
 vnoremap <C-H> :<C-U>Hexmode<CR>
 
 au! BufRead,BufNewFile *.json setfiletype json
+au BufRead,BufNewFile *.as,*.jsfl,*.mxml         set filetype=actionscript
 let javaScript_fold=1
 
 " Auto reload vimrc when you save it
