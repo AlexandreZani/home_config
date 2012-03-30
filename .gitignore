@@ -1,6 +1,7 @@
 /*
 /bin/*
 /.xmonad/*
+/.vim/.netrwhist
 !/.xmonad/
 !/.xmonad/xmonad.hs
 !/.gitignore
