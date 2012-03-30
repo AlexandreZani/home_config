@@ -4,9 +4,17 @@ syntax on
 " Line numbers
 set number
 
+" Automatic curly-brace indent
+set cindent
+set autoindent
+
+" Highlight search results
+set hlsearch
+" Press Space to turn off highlighting and clear any message already displayed.
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
 set printoptions=number:y,paper:letter
 set nocompatible
-set autoindent
 set ruler
 if version >= 600
   set foldenable
@@ -31,7 +39,7 @@ inoremap <C-H> <Esc>:Hexmode<CR>
 vnoremap <C-H> :<C-U>Hexmode<CR>
 
 au! BufRead,BufNewFile *.json setfiletype json
-au BufRead,BufNewFile *.as,*.jsfl,*.mxml         set filetype=actionscript
+au BufRead,BufNewFile *.as,*.jsfl,*.mxml set filetype=actionscript
 let javaScript_fold=1
 
 " Auto reload vimrc when you save it
