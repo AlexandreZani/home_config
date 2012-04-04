@@ -1,3 +1,6 @@
+-- Check file
+-- xmonad --recompile
+
 import XMonad
 import XMonad.Util.EZConfig
 
