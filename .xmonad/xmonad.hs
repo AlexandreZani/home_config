@@ -1,5 +1,6 @@
 -- Check file
 -- xmonad --recompile
+-- Mod-q reloads xmonad
 
 import XMonad
 import XMonad.Util.EZConfig
