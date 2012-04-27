@@ -13,6 +13,9 @@ set hlsearch
 " Press Space to turn off highlighting and clear any message already displayed.
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
+" Incremental search.
+set incsearch
+
 set printoptions=number:y,paper:letter
 set nocompatible
 set ruler
