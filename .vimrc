@@ -41,6 +41,9 @@ nnoremap <C-H> :Hexmode<CR>
 inoremap <C-H> <Esc>:Hexmode<CR>
 vnoremap <C-H> :<C-U>Hexmode<CR>
 
+noremap <C-j> <C-d>
+noremap <C-k> <C-u>
+
 au! BufRead,BufNewFile *.json setfiletype json
 au BufRead,BufNewFile *.as,*.jsfl,*.mxml set filetype=actionscript
 let javaScript_fold=1
