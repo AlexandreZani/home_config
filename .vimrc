@@ -54,6 +54,6 @@ if has("autcmd")
   autocmd BufWritePost .vimrc.local source $MYVIMRC
 endif
 
-if filereadable(glob("~/.vimrc.local"))
-  source ~/.vimrc.local
+if filereadable(glob("~/.local.conf/.vimrc"))
+  source ~/.local.conf/.vimrc
 endif

@@ -105,12 +105,14 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+LOCAL_BASHRC=$HOME/.local.conf/.bashrc
+
 export LOCAL_HOME=/usr/local/google/home/$USER
 alias vim="vim"
 alias vs="vim -"
 alias v="vim"
 alias e="vim ~/.bashrc"
-alias el="vim ~/.bashrc.local"
+alias el="vim $LOCAL_BASHRC"
 alias r='source ~/.bashrc'
 export EDITOR='vim'
 alias lh='cd $LOCAL_HOME'
