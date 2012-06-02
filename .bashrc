@@ -54,9 +54,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\n\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -105,12 +105,14 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+LOCAL_BASHRC=$HOME/.local.conf/.bashrc
+
 export LOCAL_HOME=/usr/local/google/home/$USER
 alias vim="vim"
 alias vs="vim -"
 alias v="vim"
 alias e="vim ~/.bashrc"
-alias el="vim ~/.bashrc.local"
+alias el="vim $LOCAL_BASHRC"
 alias r='source ~/.bashrc'
 export EDITOR='vim'
 alias lh='cd $LOCAL_HOME'
@@ -123,4 +125,4 @@ alias :q='echo "This is not vim"'
 alias gb="git branch | grep '*'"
 alias de="xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'"
 
-[ -f ~/.bashrc.local ] && source ~/.bashrc.local
+[ -f $LOCAL_BASHRC ] && source $LOCAL_BASHRC

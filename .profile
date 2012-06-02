@@ -9,10 +9,11 @@
 #umask 022
 
 export SUDO_ASKPASS="$HOME/bin/dpass"
+LOCAL_PROFILE="$HOME/.local.conf/.profile"
 
-if [ -f $HOME/.profile.local ]
+if [ -f $LOCAL_PROFILE ]
 then
-  . $HOME/.profile.local
+  . $LOCAL_PROFILE
 fi
 
 # if running bash
