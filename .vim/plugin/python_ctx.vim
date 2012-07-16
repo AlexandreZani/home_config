@@ -5,10 +5,6 @@ def iter_back(buffer, start):
   for ln_no in xrange(start, -1, -1):
     yield buffer[ln_no]
 
-def parse_decl(line):
-  s = line.strip().split()[1].split("(")[0]
-
-
 def get_indent(line):
   indent = 0
   while line[indent].isspace():
