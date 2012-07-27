@@ -89,6 +89,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+    alias cgrep='grep --color=always' 
 fi
 
 # some more ls aliases
@@ -97,6 +98,9 @@ alias ls='ls --color'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# Preserve colors when piping to less.
+alias less='less -R'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
