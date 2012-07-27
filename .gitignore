@@ -5,6 +5,8 @@
 !/bin/dpass
 !/bin/xquit
 !/.gitignore
+!/.i3/
+!/.i3/config
 !/.inputrc
 !/.profile
 !/.screenrc
