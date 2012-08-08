@@ -22,15 +22,18 @@ def find_python_ctx(buffer, start):
     if line_indent < cur_indent:
       cur_indent = line_indent
       tokens = line.split()
-      if tokens[0] in set(['class', 'def']):
-        name = tokens[1].split("(")[0]
-        if tokens[0] == 'def':
-          func = name
-          if line_indent == 0:
+      try:
+        if tokens[0] in set(['class', 'def']):
+          name = tokens[1].split("(")[0]
+          if tokens[0] == 'def':
+            func = name
+            if line_indent == 0:
+              return (cls, func)
+          elif tokens[0] == 'class':
+            cls = name
             return (cls, func)
-        elif tokens[0] == 'class':
-          cls = name
-          return (cls, func)
+      except Exception:
+        continue
   return (cls, func)
 
 def get_cur_python_ctx():
