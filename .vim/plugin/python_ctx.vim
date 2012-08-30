@@ -31,6 +31,8 @@ def find_python_ctx(buffer, start):
               return (cls, func)
           elif tokens[0] == 'class':
             cls = name
+            if cls[-1] == ':':
+              cls = cls[:-1]
             return (cls, func)
       except Exception:
         continue
