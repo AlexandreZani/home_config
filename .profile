@@ -8,6 +8,7 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+export TERMINAL="terminator"
 export SUDO_ASKPASS="$HOME/bin/dpass"
 LOCAL_PROFILE="$HOME/.local.conf/.profile"
 
