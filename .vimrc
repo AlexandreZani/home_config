@@ -45,6 +45,7 @@ noremap <C-k> <C-u>
 
 au! BufRead,BufNewFile *.json setfiletype json
 au BufRead,BufNewFile *.as,*.jsfl,*.mxml set filetype=actionscript
+au BufRead,BufNewFile *.go set filetype=go
 let javaScript_fold=1
 
 " Auto reload vimrc when you save it
