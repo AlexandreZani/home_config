@@ -35,7 +35,6 @@ set shiftwidth=2
 set expandtab
 set softtabstop=2
 
-
 " Easier hex editing
 nnoremap <C-H> :Hexmode<CR>
 inoremap <C-H> <Esc>:Hexmode<CR>
@@ -63,6 +62,10 @@ imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
+
+" Change colors beyond 80 characters
+let &colorcolumn=join(range(81, 999), ",")
+highlight ColorColumn ctermbg=DarkGray
 
 if filereadable(glob("~/.local.conf/.vimrc"))
   source ~/.local.conf/.vimrc
