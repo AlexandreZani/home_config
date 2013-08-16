@@ -1,6 +1,10 @@
 " Syntax highlighting
 syntax on
 
+" No need to backup
+set nobackup
+set noswapfile
+
 " Line numbers
 set number
 
