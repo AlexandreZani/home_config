@@ -4,6 +4,7 @@
 /bin/*
 !/bin/dpass
 !/bin/xquit
+!/.config/terminator/config
 !/.gitignore
 !/.i3/
 !/.i3/config
