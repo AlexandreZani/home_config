@@ -1,3 +1,7 @@
+if filereadable(glob("~/.local.conf/.vimrc.early"))
+  source ~/.local.conf/.vimrc.early
+endif
+
 " Syntax highlighting
 syntax on
 
@@ -67,6 +71,7 @@ imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
+imap jj <Esc>
 
 " Change colors beyond 80 characters
 let &colorcolumn=join(range(81, 999), ",")
