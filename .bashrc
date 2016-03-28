@@ -144,5 +144,6 @@ alias :w='echo "This is not vim"'
 alias :q='echo "This is not vim"'
 alias gb="git branch | grep '*'"
 alias de="xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'"
+alias :e='vim'
 
 [ -f $LOCAL_BASHRC ] && source $LOCAL_BASHRC
