@@ -14,6 +14,7 @@ syn keyword mojomClause import module
 syn keyword mojomType struct union const interface
 syn keyword mojomType int8 int16 utint32 int64
 syn keyword mojomType uint8 uint16 utint32 uint64
+syn keyword mojomType float double
 syn keyword mojomType string
 
 " Commants
