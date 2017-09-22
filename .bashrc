@@ -128,7 +128,7 @@ fi
 LOCAL_BASHRC=$HOME/.local.conf/.bashrc
 
 export LOCAL_HOME=/usr/local/google/home/$USER
-alias vim="vim"
+alias vim="vim -O"
 alias vs="vim -"
 alias v="vim"
 alias e="vim ~/.bashrc"
