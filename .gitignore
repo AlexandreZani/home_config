@@ -5,6 +5,9 @@
 !/bin
 /bin/*
 !/bin/dpass
+!/bin/clang-format.py
+!/bin/sf
+!/bin/lap
 !/bin/xquit
 !/.config/terminator/config
 !/.gitignore
