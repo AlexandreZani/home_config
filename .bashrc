@@ -147,4 +147,20 @@ alias gb="git branch | grep '*'"
 alias de="xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'"
 alias :e='vim'
 
+# Work-related things.
+
+alias s="grep -R -T --exclude-dir=out --exclude-dir=.git --exclude-dir=sysroot --exclude-dir=third_party"
+alias cs="s"
+alias fs="find . -name"
+alias review="git push origin HEAD:refs/for/master"
+alias draft="git push origin HEAD:refs/drafts/master"
+
+export FUCHSIA_DIR=$HOME/garnet
+
+export PATH=$FUCHSIA_DIR/.jiri_root/bin:$PATH
+export PATH=$HOME/depot_tools:"$PATH"
+export GOMA_OAUTH2_CONFIG_FILE=$HOME/.goma_oauth2_config
+export GOMA_DIR=$HOME/goma
+export PATH=$HOME/cobalt/sysroot/bin:$PATH
+
 [ -f $LOCAL_BASHRC ] && source $LOCAL_BASHRC
