@@ -44,7 +44,7 @@ if vim.eval('exists("g:clang_format_path")') == "1":
 # 'clang-format --help' for a list of supported styles. The default looks for
 # a '.clang-format' or '_clang-format' file to indicate the style that should be
 # used.
-style = 'file'
+style = 'Google'
 fallback_style = None
 if vim.eval('exists("g:clang_format_fallback_style")') == "1":
   fallback_style = vim.eval('g:clang_format_fallback_style')

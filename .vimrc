@@ -78,6 +78,11 @@ imap jj <Esc>
 let &colorcolumn=join(range(81, 999), ",")
 highlight ColorColumn ctermbg=DarkGray
 
+" Setup vim-go plugin.
+call plug#begin()
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+call plug#end()
+
 if filereadable(glob("~/.local.conf/.vimrc"))
   source ~/.local.conf/.vimrc
 endif
