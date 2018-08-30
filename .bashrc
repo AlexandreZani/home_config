@@ -168,4 +168,8 @@ function sr()
   find . -type f -exec sed -i "$1" {} +
 }
 
+ROOT_DIR=$HOME/root/bin/thisroot.sh
+[ -f $ROOT_DIR ] && source $ROOT_DIR
+
+
 [ -f $LOCAL_BASHRC ] && source $LOCAL_BASHRC
