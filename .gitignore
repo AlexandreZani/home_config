@@ -28,3 +28,5 @@
 !/.xprofile
 !/.vim/autoload/
 !/.jupyter/
+/.jupyter/*
+!/.jupyter/jupyter_notebook_config.py
