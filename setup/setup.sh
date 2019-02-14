@@ -51,3 +51,8 @@ git clone "${remote_git_user}@${git_server}:${remote_git_repo}" ${repo_dir} || e
 
 cp -rf "${repo_dir}/." $home_dir || fail "Could not copy contents of $repo_dir!!!!"
 rm -rf ${repo_dir}
+
+local_conf="$home_dir/.local.conf"
+mkdir -p $local_conf || fail "Could not create .local.conf!!!"
+
+touch "${local_conf}/.tmux.conf" || fail "Could not create .tmux.conf!!!"
