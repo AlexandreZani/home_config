@@ -2,15 +2,19 @@
 
 # Run using
 #
-# curl -s "https://raw.githubusercontent.com/AlexandreZani/home_config/master/setup/setup.sh" | bash
+# curl "https://raw.githubusercontent.com/AlexandreZani/home_config/master/setup/setup.sh" -o setup.sh
+# sh setup.sh
 
 set +e
 
 function check_needed {
   if [ "${EMAIL}" == "" ] || [ "${NAME}" == "" ]; then
+    if [ "${NAME}" == "" ]; then
+      NAME="Alexandre Zani"
+    fi
     echo "You need to set the following variables: "
-    echo "export EMAIL=${EMAIL}"
-    echo "export NAME=${NAME}"
+    echo "export EMAIL=\"${EMAIL}\""
+    echo "export NAME=\"${NAME}\""
     exit 1
   fi
 }
@@ -42,7 +46,8 @@ You might need to generate some new keys:
 
 Run:
 
-curl -s "https://raw.githubusercontent.com/AlexandreZani/home_config/master/setup/keygen.sh" | bash
+curl "https://raw.githubusercontent.com/AlexandreZani/home_config/master/setup/keygen.sh" -o keygen.sh
+sh keygen.sh
 END
   exit 1
 fi
@@ -56,3 +61,6 @@ local_conf="$home_dir/.local.conf"
 mkdir -p $local_conf || fail "Could not create .local.conf!!!"
 
 touch "${local_conf}/.tmux.conf" || fail "Could not create .tmux.conf!!!"
+
+git config --global user.email "${EMAIL}"
+git config --global user.name "${NAME}"
