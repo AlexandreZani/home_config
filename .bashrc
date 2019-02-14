@@ -155,9 +155,6 @@ alias fs="find . -name"
 alias review="git push origin HEAD:refs/for/master"
 alias draft="git push origin HEAD:refs/drafts/master"
 
-export FUCHSIA_DIR=$HOME/garnet
-
-export PATH=$FUCHSIA_DIR/.jiri_root/bin:$PATH
 export PATH=$HOME/depot_tools:"$PATH"
 export GOMA_OAUTH2_CONFIG_FILE=$HOME/.goma_oauth2_config
 export GOMA_DIR=$HOME/goma
@@ -165,7 +162,7 @@ export PATH=$HOME/cobalt/sysroot/bin:$PATH
 
 function sr()
 {
-  find . -type f -exec sed -i "$1" {} +
+  find . -type d \( -path ./out -o -path ./.git -o -path ./sysroot \) -prune -o -type f -exec sed -i "$1" {} +
 }
 
 ROOT_DIR=$HOME/root/bin/thisroot.sh

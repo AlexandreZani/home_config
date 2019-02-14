@@ -47,10 +47,10 @@ END
   exit 1
 fi
 
-git clone "${remote_git_user}@${git_server}:${remote_git_repo}" ${repo_dir} || exit 1
+git clone "${remote_git_user}@${git_server}:${remote_git_repo}" ${repo_dir} || fail "Cloning failed!!!"
 
 cp -rf "${repo_dir}/." $home_dir || fail "Could not copy contents of $repo_dir!!!!"
-rm -rf ${repo_dir}
+rm -rf ${repo_dir} || fail "Could not delete ${repo_dir}"
 
 local_conf="$home_dir/.local.conf"
 mkdir -p $local_conf || fail "Could not create .local.conf!!!"
