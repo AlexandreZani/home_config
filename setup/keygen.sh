@@ -29,10 +29,10 @@ ssh-keygen -t rsa -b 4096 -C $EMAIL -f $private_keyfile || fail "Could not creat
 
 touch $ssh_config
 echo "Host github.com" >> $ssh_config
-echo "\tUser git" >> $ssh_config
-echo "\tHostname github.com" >> $ssh_config
-echo "\tPreferredAuthentications publickey" >> $ssh_config
-echo "\tIdentifyFile $private_keyfile" >> $ssh_config
+echo "    User git" >> $ssh_config
+echo "    Hostname github.com" >> $ssh_config
+echo "    PreferredAuthentications publickey" >> $ssh_config
+echo "    IdentityFile $private_keyfile" >> $ssh_config
 
 echo ""
 echo ""
