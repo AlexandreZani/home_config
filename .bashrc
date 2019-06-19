@@ -146,10 +146,12 @@ alias :q='echo "This is not vim"'
 alias gb="git branch | grep '*'"
 alias de="xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'"
 alias :e='vim'
+alias clang-format='clang-format -i -style=google'
 
 # Work-related things.
 
 alias s="grep -R -T --exclude-dir=out --exclude-dir=.git --exclude-dir=sysroot --exclude-dir=third_party"
+alias sa="grep -R -T --exclude-dir=out --exclude-dir=.git"
 alias cs="s"
 alias fs="find . -name"
 alias review="git push origin HEAD:refs/for/master"
