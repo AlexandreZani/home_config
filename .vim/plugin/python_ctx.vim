@@ -1,8 +1,8 @@
-python << EOF
+python3 << EOF
 import vim
 
 def iter_back(buffer, start):
-  for ln_no in xrange(start, -1, -1):
+  for ln_no in range(start, -1, -1):
     yield buffer[ln_no]
 
 def get_indent(line):
@@ -16,7 +16,7 @@ def find_python_ctx(buffer, start):
   cls = None
   cur_indent = 10000000
   for line in iter_back(buffer, start):
-    if line.strip() == "":
+    if line.strip() == '':
       continue
     line_indent = get_indent(line)
     if line_indent < cur_indent:
@@ -24,7 +24,7 @@ def find_python_ctx(buffer, start):
       tokens = line.split()
       try:
         if tokens[0] in set(['class', 'def']):
-          name = tokens[1].split("(")[0]
+          name = tokens[1].split('(')[0]
           if tokens[0] == 'def':
             func = name
             if line_indent == 0:
@@ -45,14 +45,14 @@ def get_cur_python_ctx():
 def print_cur_python_ctx():
   cls, func = get_cur_python_ctx()
   if func and cls is None:
-    print "def %s" % func
+    print('def {}'.format(func))
   elif cls and func is None:
-    print "class %s" % cls
+    print('class {}'.format(cls))
   elif cls and func:
-    print "%s.%s" % (cls, func)
+    print('{}.{}'.format(cls, func))
 EOF
 
 augroup python_context
   autocmd!
-  autocmd CursorMoved *.py :python print_cur_python_ctx()
+  autocmd CursorMoved *.py :python3 print_cur_python_ctx()
 augroup END
