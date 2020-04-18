@@ -3,7 +3,7 @@
 # Run using
 #
 # curl "https://raw.githubusercontent.com/AlexandreZani/home_config/master/setup/setup.sh" -o setup.sh
-# sh setup.sh
+# bash setup.sh
 
 set +e
 
@@ -47,7 +47,7 @@ You might need to generate some new keys:
 Run:
 
 curl "https://raw.githubusercontent.com/AlexandreZani/home_config/master/setup/keygen.sh" -o keygen.sh
-sh keygen.sh
+bash keygen.sh
 END
   exit 1
 fi
