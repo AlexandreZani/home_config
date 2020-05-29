@@ -20,6 +20,7 @@
 !/.screenrc
 !/.tmux.conf
 !/.vim/
+!/.vim/*
 /.vim/.netrwhist
 !/.vimrc
 !/.xinitrc
