@@ -19,6 +19,7 @@
 !/.profile
 !/.screenrc
 !/.tmux.conf
+!/.emacs
 !/.vim/
 /.vim/.netrwhist
 !/.vimrc
