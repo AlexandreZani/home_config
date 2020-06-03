@@ -21,6 +21,7 @@
 !/.tmux.conf
 !/.emacs
 !/.vim/
+!/.vim/*
 /.vim/.netrwhist
 !/.vimrc
 !/.xinitrc
