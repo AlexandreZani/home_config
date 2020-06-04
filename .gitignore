@@ -20,6 +20,9 @@
 !/.screenrc
 !/.tmux.conf
 !/.emacs
+!/.emacs.d
+/.emacs.d/*
+!/.emacs.d/google-c-style
 !/.vim/
 !/.vim/*
 /.vim/.netrwhist
