@@ -1,3 +1,7 @@
 [submodule ".vim/pack/plugins/start/vim-go"]
 	path = .vim/pack/plugins/start/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule ".emacs.d/evil"]
+	path = .emacs.d/evil
+	url = https://github.com/emacs-evil/evil.git
+	branch = release-1.2

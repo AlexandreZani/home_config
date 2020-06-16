@@ -23,6 +23,7 @@
 !/.emacs.d
 /.emacs.d/*
 !/.emacs.d/google-c-style
+!/.emacs.d/evil
 !/.vim/
 !/.vim/*
 /.vim/.netrwhist
