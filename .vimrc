@@ -63,17 +63,6 @@ if has("autcmd")
   autocmd BufWritePost .vimrc.local source $MYVIMRC
 endif
 
-" Disable arrow keys
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
-imap jj <Esc>
-
 " Change colors beyond 80 characters
 let &colorcolumn=join(range(81, 999), ",")
 highlight ColorColumn ctermbg=DarkGray
