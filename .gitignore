@@ -24,6 +24,7 @@
 /.emacs.d/*
 !/.emacs.d/google-c-style
 !/.emacs.d/evil
+!/.emacs.d/clang-format
 !/.vim/
 !/.vim/*
 /.vim/.netrwhist

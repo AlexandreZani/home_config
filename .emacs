@@ -13,3 +13,14 @@
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
 (evil-mode 1)
+
+;; Enable clang-format on save
+(add-to-list 'load-path "~/.emacs.d/clang-format")
+(require 'clang-format)
+
+(defun c++-mode-before-save-hook ()
+  (when (eq major-mode 'c++-mode)
+    (clang-format-buffer)))
+
+
+(add-hook 'before-save-hook #'c++-mode-before-save-hook)
