@@ -4,6 +4,9 @@
 ;; stop creating #auto-save# files.
 (setq auto-save-default nil)
 
+;; stop showing the welcome buffer
+(setq inhibit-startup-screen t)
+
 ;; Enable google c style
 (add-to-list 'load-path "~/.emacs.d/google-c-style")
 (require 'google-c-style)
@@ -21,6 +24,5 @@
 (defun c++-mode-before-save-hook ()
   (when (eq major-mode 'c++-mode)
     (clang-format-buffer)))
-
 
 (add-hook 'before-save-hook #'c++-mode-before-save-hook)
