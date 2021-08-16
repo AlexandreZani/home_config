@@ -67,6 +67,10 @@ endif
 let &colorcolumn=join(range(81, 999), ",")
 highlight ColorColumn ctermbg=DarkGray
 
+" Disable bells
+set visualbell
+set t_vb=
+
 " Setup vim-go plugin.
 call plug#begin()
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
