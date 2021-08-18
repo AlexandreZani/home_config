@@ -1,3 +1,6 @@
+;; Disable bell.
+(setq ring-bell-function 'ignore)
+
 ;; stop creating backup~ files.
 (setq make-backup-files nil)
 
