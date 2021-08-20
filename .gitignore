@@ -22,6 +22,7 @@
 !/.emacs
 !/.emacs.d
 /.emacs.d/*
+!/.emacs.d/init.el
 !/.emacs.d/google-c-style
 !/.emacs.d/evil
 !/.emacs.d/clang-format
