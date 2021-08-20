@@ -1,4 +1,10 @@
-;; Disable bell.
+;; load local emacs config if it exists.
+(when (file-exists-p "~/.local.conf/.emacs")
+  (load "~/.local.conf/.emacs"))
+
+(global-display-line-numbers-mode)
+
+;; disable bell.
 (setq ring-bell-function 'ignore)
 
 ;; stop creating backup~ files.
