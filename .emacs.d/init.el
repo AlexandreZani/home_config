@@ -21,16 +21,15 @@
 ;; Add the submodules
 (setq submodule-packages '(google-c-style
 			   clang-format
-			   ;; dependencies for lean-mode
-			   dash
-			   f
-			   flycheck
-			   s
+			   ;; lean-mode dependencies
+			   dash f flycheck s
 			   lean-mode
 			   ))
 
 (dolist (p submodule-packages)
   (add-to-list 'load-path (concat "~/.emacs.d/" (symbol-name p))))
+(dolist (p submodule-packages)
+  (require p))
 
 
 ;; format c++ files on save.
