@@ -1,7 +1,9 @@
 ;; load local emacs config if it exists.
-(when (file-exists-p "~/.local.conf/.emacs")
-  (load "~/.local.conf/.emacs"))
+(let ((local-emacs-config "~/.local.conf/emacs.el"))
+     (when (file-exists-p local-emacs-config)
+       (load local-emacs-config)))
 
+;; display line numbers
 (global-display-line-numbers-mode)
 
 ;; disable bell.
@@ -16,17 +18,23 @@
 ;; stop showing the welcome buffer
 (setq inhibit-startup-screen t)
 
-;; Enable google c style
-(add-to-list 'load-path "~/.emacs.d/google-c-style")
-(require 'google-c-style)
-(add-hook 'c-mode-common-hook 'google-set-c-style)
+;; Add the submodules
+(setq submodule-packages '(google-c-style
+			   clang-format
+			   ;; dependencies for lean-mode
+			   dash
+			   f
+			   flycheck
+			   s
+			   lean-mode
+			   ))
 
-;; Enable clang-format on save
-(add-to-list 'load-path "~/.emacs.d/clang-format")
-(require 'clang-format)
+(dolist (p submodule-packages)
+  (add-to-list 'load-path (concat "~/.emacs.d/" (symbol-name p))))
 
+
+;; format c++ files on save.
 (defun c++-mode-before-save-hook ()
   (when (eq major-mode 'c++-mode)
     (clang-format-buffer)))
-
 (add-hook 'before-save-hook #'c++-mode-before-save-hook)

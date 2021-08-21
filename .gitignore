@@ -23,9 +23,14 @@
 !/.emacs.d
 /.emacs.d/*
 !/.emacs.d/init.el
-!/.emacs.d/google-c-style
-!/.emacs.d/evil
 !/.emacs.d/clang-format
+!/.emacs.d/dash
+!/.emacs.d/evil
+!/.emacs.d/f
+!/.emacs.d/flycheck
+!/.emacs.d/google-c-style
+!/.emacs.d/lean-mode
+!/.emacs.d/s
 !/.vim/
 !/.vim/*
 /.vim/.netrwhist
