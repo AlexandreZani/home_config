@@ -7,4 +7,4 @@ function GofmtBuffer()
   call setpos('.', cursor_pos)
 endfunction
 
-autocmd BufWritePre * :call GofmtBuffer()
+" autocmd BufWritePre * :call GofmtBuffer()
