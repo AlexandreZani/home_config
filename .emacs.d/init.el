@@ -8,6 +8,7 @@
 
 ;; disable bell.
 (setq ring-bell-function 'ignore)
+(setq visible-bell nil)
 
 ;; stop creating backup~ files.
 (setq make-backup-files nil)
