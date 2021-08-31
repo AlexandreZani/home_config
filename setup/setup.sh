@@ -53,10 +53,11 @@ END
 fi
 
 git clone "${remote_git_user}@${git_server}:${remote_git_repo}" ${repo_dir} || fail "Cloning failed!!!"
-git submodule update --init --recursive || fail "git submodule update failed!!!"
 
 cp -rf "${repo_dir}/." $home_dir || fail "Could not copy contents of $repo_dir!!!!"
 rm -rf ${repo_dir} || fail "Could not delete ${repo_dir}"
+
+git submodule update --init --recursive || fail "git submodule update failed!!!"
 
 local_conf="$home_dir/.local.conf"
 mkdir -p $local_conf || fail "Could not create .local.conf!!!"
