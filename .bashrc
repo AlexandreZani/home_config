@@ -160,6 +160,7 @@ alias draft="git push origin HEAD:refs/drafts/master"
 
 export PATH=$HOME/depot_tools:"$PATH"
 export PATH=$HOME/.opam/default/bin:"$PATH"
+export PATH=$HOME/.elan/bin:"$PATH"
 export GOMA_OAUTH2_CONFIG_FILE=$HOME/.goma_oauth2_config
 export GOMA_DIR=$HOME/goma
 export PATH=$HOME/cobalt/sysroot/bin:$PATH
