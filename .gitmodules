@@ -20,3 +20,6 @@
 [submodule ".emacs.d/s"]
 	path = .emacs.d/s
 	url = https://github.com/magnars/s.el.git
+[submodule ".emacs.d/fstar-mode.el"]
+	path = .emacs.d/fstar-mode
+	url = https://github.com/FStarLang/fstar-mode.el.git

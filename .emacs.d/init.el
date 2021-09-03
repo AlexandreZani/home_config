@@ -25,6 +25,7 @@
 			   ;; lean-mode dependencies
 			   dash f flycheck s
 			   lean-mode
+			   fstar-mode
 			   ))
 
 (dolist (p submodule-packages)
