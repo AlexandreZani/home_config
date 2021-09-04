@@ -1,25 +1,3 @@
 [submodule ".vim/pack/plugins/start/vim-go"]
 	path = .vim/pack/plugins/start/vim-go
 	url = https://github.com/fatih/vim-go.git
-[submodule ".emacs.d/evil"]
-	path = .emacs.d/evil
-	url = https://github.com/emacs-evil/evil.git
-	branch = release-1.2
-[submodule ".emacs.d/lean-mode"]
-	path = .emacs.d/lean-mode
-	url = https://github.com/leanprover/lean-mode.git
-[submodule ".emacs.d/dash"]
-	path = .emacs.d/dash
-	url = https://github.com/magnars/dash.el.git
-[submodule ".emacs.d/f"]
-	path = .emacs.d/f
-	url = https://github.com/rejeep/f.el.git
-[submodule ".emacs.d/flycheck"]
-	path = .emacs.d/flycheck
-	url = https://github.com/flycheck/flycheck.git
-[submodule ".emacs.d/s"]
-	path = .emacs.d/s
-	url = https://github.com/magnars/s.el.git
-[submodule ".emacs.d/fstar-mode.el"]
-	path = .emacs.d/fstar-mode
-	url = https://github.com/FStarLang/fstar-mode.el.git
