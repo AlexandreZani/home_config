@@ -2,7 +2,7 @@
 
 # Run using
 #
-# curl "https://raw.githubusercontent.com/AlexandreZani/home_config/main/setup/setup.sh" -o setup.sh
+# curl "https://raw.githubusercontent.com/AlexandreZani/home_config/main/.setup/setup.sh" -o setup.sh
 # bash setup.sh
 
 set +e
