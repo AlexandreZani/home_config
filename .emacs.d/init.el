@@ -8,7 +8,10 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-(setq package-selected-packages '(lean-mode fstar-mode))
+(setq package-selected-packages '(lean-mode
+				  fstar-mode
+				  proof-general
+				  company-coq))
 
 (let ((need-to-install nil))
   (dolist (p package-selected-packages)
