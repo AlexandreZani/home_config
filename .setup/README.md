@@ -18,6 +18,12 @@ Install elan
 curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh
 ```
 
+Install lean4
+
+```
+elan default leanprover/lean4:stable
+```
+
 ## F-star
 
 Install opam

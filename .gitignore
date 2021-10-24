@@ -9,8 +9,8 @@
 !/bin/sf
 !/bin/lap
 !/bin/xquit
-!/setup
-!/setup/*
+!/.setup
+!/.setup/*
 !/.config/terminator/config
 !/.gitignore
 !/.i3/
