@@ -10,14 +10,12 @@ set -o vi
 [ -z "$PS1" ] && return
 
 # Detect if we are running on WSL.
-if [ -z "$IS_WSL" ]
-  if [[ grep -qi -- '-WSL' /proc/sys/kernel/osrelease || test -f /proc/sys/fs/binfmt_misc/WSLInterop ]]
-    export IS_WSL=1
-  fi
+if grep -iq -- "-WSL" /proc/sys/kernel/osrelease; then
+  export IS_WSL=1
 fi
 
 # If we are running on WSL, setup DISPLAY to connect to XWindows.
-if [ -n "$IS_WSL" ]
+if [ -n "$IS_WSL" ]; then
   export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
 fi
 
