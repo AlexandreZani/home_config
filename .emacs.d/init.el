@@ -11,7 +11,8 @@
 (setq package-selected-packages '(lean-mode
 				  fstar-mode
 				  proof-general
-				  company-coq))
+				  company-coq
+				  markdown-mode))
 
 (let ((need-to-install nil))
   (dolist (p package-selected-packages)
@@ -57,3 +58,6 @@
   (when (eq major-mode 'c++-mode)
     (clang-format-buffer)))
 (add-hook 'before-save-hook #'c++-mode-before-save-hook)
+
+(custom-set-variables
+ '(markdown-command "/usr/bin/pandoc"))
