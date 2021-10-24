@@ -9,6 +9,18 @@ set -o vi
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# Detect if we are running on WSL.
+if [ -z "$IS_WSL" ]
+  if [[ grep -qi -- '-WSL' /proc/sys/kernel/osrelease || test -f /proc/sys/fs/binfmt_misc/WSLInterop ]]
+    export IS_WSL=1
+  fi
+fi
+
+# If we are running on WSL, setup DISPLAY to connect to XWindows.
+if [ -n "$IS_WSL" ]
+  export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
+fi
+
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace
