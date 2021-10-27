@@ -4,7 +4,7 @@
 curl "https://raw.githubusercontent.com/AlexandreZani/home_config/main/.setup/keygen.sh" -sSf | bash
 ```
 
-## Setup
+## Setup Home Config
 
 ```
 curl "https://raw.githubusercontent.com/AlexandreZani/home_config/main/.setup/setup.sh" -sSf | bash
@@ -35,4 +35,10 @@ sudo apt-get install opam
 Install fstar
 ```
 opam install fstar
+```
+
+## Buildifier
+
+```
+go get -u github.com/bazelbuild/buildtools/buildifier
 ```
