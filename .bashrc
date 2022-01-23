@@ -139,6 +139,7 @@ LOCAL_BASHRC=$HOME/.local.conf/.bashrc
 
 export LOCAL_HOME=/usr/local/google/home/$USER
 export PATH=$HOME/bin:$PATH
+export PATH=$HOME/.cabal/bin:$PATH
 alias vim="vim -O"
 alias vs="vim -"
 alias v="vim"
