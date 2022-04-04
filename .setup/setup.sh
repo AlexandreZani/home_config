@@ -64,5 +64,7 @@ mkdir -p $local_conf || fail "Could not create .local.conf!!!"
 
 touch "${local_conf}/.tmux.conf" || fail "Could not create .tmux.conf!!!"
 
-git config --global user.email "${EMAIL}"
-git config --global user.name "${NAME}"
+local_gitconfig="${local_conf}/gitconfig"
+
+git config --file "${local_gitconfig}" user.email "${EMAIL}"
+git config --file "${local_gitconfig}" user.name "${NAME}"
