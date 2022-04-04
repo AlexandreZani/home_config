@@ -185,5 +185,7 @@ function sr()
 ROOT_DIR=$HOME/root/bin/thisroot.sh
 [ -f $ROOT_DIR ] && source $ROOT_DIR
 
+CARGO_ENV=$HOME/.cargo/env
+[ -f $CARGO_ENV ] && source $CARGO_ENV
 
 [ -f $LOCAL_BASHRC ] && source $LOCAL_BASHRC
