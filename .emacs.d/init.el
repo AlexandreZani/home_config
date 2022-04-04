@@ -12,7 +12,8 @@
 				  fstar-mode
 				  proof-general
 				  company-coq
-				  markdown-mode))
+				  markdown-mode
+				  scad-mode))
 
 (let ((need-to-install nil))
   (dolist (p package-selected-packages)
