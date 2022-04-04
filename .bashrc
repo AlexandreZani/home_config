@@ -162,7 +162,7 @@ alias emacs='emacs --no-window-system'
 
 # Work-related things.
 
-alias s="grep -R -T --exclude-dir=out --exclude-dir=.git --exclude-dir=sysroot --exclude-dir=third_party"
+alias s="grep -R -T --exclude-dir=out --exclude-dir=bazel-* --exclude-dir=.git --exclude-dir=sysroot --exclude-dir=third_party"
 alias sa="grep -R -T --exclude-dir=out --exclude-dir=.git"
 alias cs="s"
 alias fs="find . -name"
