@@ -160,7 +160,6 @@ alias draft="git push origin HEAD:refs/drafts/master"
 
 export PATH=$HOME/depot_tools:"$PATH"
 export GOMA_OAUTH2_CONFIG_FILE=$HOME/.goma_oauth2_config
-export GOMA_DIR=$HOME/goma
 export PATH=$HOME/cobalt/sysroot/bin:$PATH
 
 function sr()
