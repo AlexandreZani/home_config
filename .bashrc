@@ -190,3 +190,8 @@ CARGO_ENV=$HOME/.cargo/env
 [ -f $CARGO_ENV ] && source $CARGO_ENV
 
 [ -f $LOCAL_BASHRC ] && source $LOCAL_BASHRC
+
+if command -v opam &> /dev/null
+then
+  eval `opam env`
+fi
