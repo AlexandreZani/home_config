@@ -4,3 +4,6 @@
 [submodule ".vim/pack/coq/start/Coqtail"]
 	path = .vim/pack/coq/start/Coqtail
 	url = https://github.com/whonore/Coqtail.git
+[submodule ".vim/pack/plugins/start/vim-openscad"]
+	path = .vim/pack/plugins/start/vim-openscad
+	url = git@github.com:sirtaj/vim-openscad.git
