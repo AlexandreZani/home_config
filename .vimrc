@@ -71,6 +71,9 @@ highlight ColorColumn ctermbg=DarkGray
 set visualbell
 set t_vb=
 
+" Enable search match count.
+set shortmess-=S
+
 " Setup vim-go plugin.
 call plug#begin()
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
