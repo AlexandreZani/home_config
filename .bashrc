@@ -178,6 +178,10 @@ export GOMA_DIR=$HOME/goma
 export PATH=$HOME/cobalt/sysroot/bin:$PATH
 export PATH=$HOME/go/bin:$PATH
 
+# Set touch gestures for X1 Carbon
+xinput set-prop "Synaptics TM3289-021" "libinput Tapping Enabled" 1
+xinput set-prop "Synaptics TM3289-021" "libinput Natural Scrolling Enabled" 1
+
 function sr()
 {
   find . -type d \( -path ./out -o -path ./.git -o -path ./sysroot \) -prune -o -type f -exec sed -i "$1" {} +
