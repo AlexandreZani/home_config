@@ -17,6 +17,17 @@ exec --no-startup-id nm-applet
 
 exec --no-startup-id $HOME/lib/x1-carbon-enable-gestures
 
+# Starts chrome and terminator on startup.
+exec google-chrome
+exec terminator
+
+# Places Slack and Signal in Workspace 10
+assign [class=".*Slack.*"] 10
+assign [class="Signal"] 10
+
+# Start signal-desktop and slack on startup
+exec signal-desktop
+exec slack
 
 bindsym Control+$mod+l exec i3lock --color=111111
 
