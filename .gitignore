@@ -10,6 +10,7 @@
 !/bin/sf
 !/bin/lap
 !/bin/xquit
+!/lib
 !/.setup
 !/.setup/*
 !/.config/terminator/config

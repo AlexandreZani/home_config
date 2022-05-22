@@ -15,6 +15,9 @@ force_xinerama yes
 # Startup the gnome network manager applet
 exec --no-startup-id nm-applet
 
+exec --no-startup-id $HOME/lib/x1-carbon-enable-gestures
+
+
 bindsym Control+$mod+l exec i3lock --color=111111
 
 # font for window titles. ISO 10646 = Unicode

@@ -178,17 +178,6 @@ export GOMA_DIR=$HOME/goma
 export PATH=$HOME/cobalt/sysroot/bin:$PATH
 export PATH=$HOME/go/bin:$PATH
 
-function enable_touch_gestures()
-{
-  if xinput --list $1 &> /dev/null
-  then
-    xinput set-prop $1 "libinput Tapping Enabled" 1
-    xinput set-prop $1 "libinput Natural Scrolling Enabled" 1
-  fi
-}
-
-# Enable touch gestures for X1 Carbon
-enable_touch_gestures "Synaptics TM3289-021"
 
 function sr()
 {
