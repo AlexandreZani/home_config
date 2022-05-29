@@ -4,11 +4,10 @@
 !/.bashrc
 !/bin
 /bin/*
-!/bin/dpass
+!/bin/brightness
 !/bin/clang-format.py
+!/bin/dpass
 !/bin/format_code
-!/bin/sf
-!/bin/lap
 !/bin/xquit
 !/lib
 !/.setup
