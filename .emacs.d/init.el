@@ -76,8 +76,9 @@
  ;; If there is more than one, they won't work right.
  '(fstar-subp-overlay-processed-face ((((background light)) (:background "#EAF8FF" :extend t)) (((background dark)) (:box nil)))))
 
-(load-file (let ((coding-system-for-read 'utf-8))
-                (shell-command-to-string "agda-mode locate")))
+(if (executable-find "agda-mode")
+    (load-file (let ((coding-system-for-read 'utf-8))
+                 (shell-command-to-string "agda-mode locate"))))
 
 ;; auto-load agda-mode for .agda and .lagda.md
 (setq auto-mode-alist
