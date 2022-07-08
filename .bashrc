@@ -158,7 +158,7 @@ alias :q='echo "This is not vim"'
 alias gb="git branch | grep '*'"
 alias de="xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'"
 alias :e='vim'
-alias clang-format='clang-format -i -style=google'
+alias clang-format='clang-format -style=google'
 alias emacs='emacs --no-window-system'
 
 # Work-related things.
