@@ -31,7 +31,6 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 dropbox_script="${HOME}/bin/dropbox"
-echo $dropbox_script
 if [ -f "${dropbox_script}" ]
 then
   if ${dropbox_script} running
