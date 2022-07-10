@@ -29,3 +29,13 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+dropbox_script="${HOME}/bin/dropbox"
+echo $dropbox_script
+if [ -f "${dropbox_script}" ]
+then
+  if ${dropbox_script} running
+  then
+    ${dropbox_script} start 2> /dev/null
+  fi
+fi
