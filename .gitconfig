@@ -5,3 +5,5 @@
   path = ~/.local.conf/gitconfig
 [init]
 	defaultBranch = main
+[http]
+	cookiefile = ~/.gitcookies
