@@ -190,9 +190,12 @@ ROOT_DIR=$HOME/root/bin/thisroot.sh
 CARGO_ENV=$HOME/.cargo/env
 [ -f $CARGO_ENV ] && source $CARGO_ENV
 
-[ -f $LOCAL_BASHRC ] && source $LOCAL_BASHRC
+GHCUP_ENV=$HOME/.ghcup/env
+[ -f $GHCUP_ENV ] && source $GHCUP_ENV
 
 if command -v opam &> /dev/null
 then
   eval `opam env`
 fi
+
+[ -f $LOCAL_BASHRC ] && source $LOCAL_BASHRC
