@@ -2,6 +2,8 @@ if filereadable(glob("~/.local.conf/.vimrc.early"))
   source ~/.local.conf/.vimrc.early
 endif
 
+let g:haskell_classic_highlighting = 1
+
 execute pathogen#infect()
 " Syntax highlighting
 syntax on

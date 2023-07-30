@@ -7,3 +7,6 @@
 [submodule ".vim/pack/plugins/start/vim-openscad"]
 	path = .vim/pack/plugins/start/vim-openscad
 	url = git@github.com:sirtaj/vim-openscad.git
+[submodule ".vim/bundle/haskell-vim"]
+	path = .vim/bundle/haskell-vim
+	url = git@github.com:AlexandreZani/haskell-vim.git
