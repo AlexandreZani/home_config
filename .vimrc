@@ -2,6 +2,7 @@ if filereadable(glob("~/.local.conf/.vimrc.early"))
   source ~/.local.conf/.vimrc.early
 endif
 
+execute pathogen#infect()
 " Syntax highlighting
 syntax on
 
