@@ -38,3 +38,4 @@ then
     ${dropbox_script} start 2> /dev/null
   fi
 fi
+. "$HOME/.cargo/env"
