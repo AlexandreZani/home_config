@@ -177,7 +177,7 @@ export GOMA_OAUTH2_CONFIG_FILE=$HOME/.goma_oauth2_config
 export GOMA_DIR=$HOME/goma
 export PATH=$HOME/cobalt/sysroot/bin:$PATH
 export PATH=$HOME/go/bin:$PATH
-
+export PATH=$HOME/.ghcup/bin:$PATH
 
 function sr()
 {
