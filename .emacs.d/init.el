@@ -86,3 +86,63 @@
      '(("\\.agda\\'" . agda2-mode)
        ("\\.lagda.md\\'" . agda2-mode))
      auto-mode-alist))
+
+(defun mechanics ()
+  (interactive)
+  (run-scheme "mit-scheme --band mechanics.com"))
+
+(setq sicm-file "~/projects/func_diff_geo/tt.scm")
+
+(fset 'set-working-file
+      (lambda (&optional arg)
+        (interactive "p")
+        (funcall (lambda ()
+                   (insert
+                    (concat "(define sicm-file \""
+                            sicm-file
+                            "\")\n"))))))
+
+(fset 'load-scm
+      (lambda (&optional arg)
+        (interactive "p")
+        (funcall (lambda ()
+                   (insert "(load sicm-file)")))))
+
+(defun mechan ()
+  (interactive)
+  (split-window-below)
+  (windmove-down)
+  (mechanics)
+;  (set-working-file)
+  (comint-send-input)
+  (windmove-up)
+;  (find-file sicm-file)
+; (end-of-buffer)
+;  (windmove-down)
+;  (cond ((file-exists-p sicm-file)
+;         (interactive)
+;         (load-scm)
+;         (comint-send-input)))
+  (windmove-up))
+
+
+(defun sicm-exec-line ()
+  (interactive)
+  (save-buffer)
+  (windmove-down)
+  (comint-send-input)
+  (windmove-up))
+
+(defun sicm-exec-file ()
+  (interactive)
+  (save-buffer)
+  (let ((cur-file (buffer-file-name (window-buffer (minibuffer-selected-window)))))
+	(windmove-down)
+	(insert (concat "(load \"" cur-file "\")\n"))
+;  (load-scm)
+	(comint-send-input)
+	(windmove-up)))
+
+(global-set-key (kbd "C-x C-e") 'sicm-exec-line)
+
+(global-set-key (kbd "C-x C-a") 'sicm-exec-file)
